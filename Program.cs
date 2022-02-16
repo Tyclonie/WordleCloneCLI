@@ -7,7 +7,7 @@ namespace Wordle
         static void Main(String[] args) 
         {
             var game = new Game("hello");
-            Console.WriteLine(game.word);
+            var request = new GameWord();
         }
     }
 }
