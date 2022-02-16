@@ -1,0 +1,15 @@
+/Users/williamthomson/Documents/VSCProjects/WordleC#/bin/Debug/net6.0/WordleC#
+/Users/williamthomson/Documents/VSCProjects/WordleC#/bin/Debug/net6.0/WordleC#.deps.json
+/Users/williamthomson/Documents/VSCProjects/WordleC#/bin/Debug/net6.0/WordleC#.runtimeconfig.json
+/Users/williamthomson/Documents/VSCProjects/WordleC#/bin/Debug/net6.0/WordleC#.dll
+/Users/williamthomson/Documents/VSCProjects/WordleC#/bin/Debug/net6.0/ref/WordleC#.dll
+/Users/williamthomson/Documents/VSCProjects/WordleC#/bin/Debug/net6.0/WordleC#.pdb
+/Users/williamthomson/Documents/VSCProjects/WordleC#/obj/Debug/net6.0/WordleC#.csproj.AssemblyReference.cache
+/Users/williamthomson/Documents/VSCProjects/WordleC#/obj/Debug/net6.0/WordleC#.GeneratedMSBuildEditorConfig.editorconfig
+/Users/williamthomson/Documents/VSCProjects/WordleC#/obj/Debug/net6.0/WordleC#.AssemblyInfoInputs.cache
+/Users/williamthomson/Documents/VSCProjects/WordleC#/obj/Debug/net6.0/WordleC#.AssemblyInfo.cs
+/Users/williamthomson/Documents/VSCProjects/WordleC#/obj/Debug/net6.0/WordleC#.csproj.CoreCompileInputs.cache
+/Users/williamthomson/Documents/VSCProjects/WordleC#/obj/Debug/net6.0/WordleC#.dll
+/Users/williamthomson/Documents/VSCProjects/WordleC#/obj/Debug/net6.0/ref/WordleC#.dll
+/Users/williamthomson/Documents/VSCProjects/WordleC#/obj/Debug/net6.0/WordleC#.pdb
+/Users/williamthomson/Documents/VSCProjects/WordleC#/obj/Debug/net6.0/WordleC#.genruntimeconfig.cache
