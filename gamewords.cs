@@ -8,7 +8,7 @@ namespace Wordle
         private String word;
         public GameWord()
         {
-            this.word = RequestWords();
+            this.word = this.RequestWords();
         }
         private String RequestWords() 
         {
@@ -28,7 +28,11 @@ namespace Wordle
                     return tempword;
                 }
             }
-            return RequestWords();
+            return this.RequestWords();
+        }
+        public String GetWord() 
+        {
+            return this.word;
         }
     }
 }
