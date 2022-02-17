@@ -7,38 +7,74 @@ namespace Wordle
         static void Main(String[] args) 
         {
             Console.Clear();
+            Console.ForegroundColor=ConsoleColor.White;
+            var word = new GameWord().GetWord();
+            String[] enteredwords = {"none", "none", "none", "none", "none"};
+            int[] correct = {-1, -1, -1, -1, -1};
             bool guessed = false;
-            while (!guessed) 
+            int loops = 0;
+            while (!guessed && loops < 5) 
             {
-                var word = new GameWord().GetWord();
                 Console.WriteLine("What is your guess?");
-                String enteredword = Console.ReadLine();
-                while (enteredword.Length != 5)
+                enteredwords[loops] = Console.ReadLine();
+                while (enteredwords[loops].Length != 5)
                 {
                     Console.WriteLine("5 letters please.");
-                    enteredword = Console.ReadLine();
+                    enteredwords[loops] = Console.ReadLine();
                 }
-                int[] correct = {-1, -1, -1, -1, -1};
-                for (int i = 0; i < word.Length; i++) 
+                Console.Clear();
+                Console.ForegroundColor = ConsoleColor.White;
+                foreach (var enteredword in enteredwords) 
                 {
-                    if (word[i] == enteredword[i])
+                    if (enteredword != "none") 
                     {
-                        correct[i] = 1;
+                        for (int i = 0; i < enteredword.Length; i++) 
+                        {
+                            if (word.Contains(enteredword[i]))
+                            {
+                                correct[i] = 0;
+                            }
+                            if (word[i] == enteredword[i])
+                            {
+                                correct[i] = 1;
+                            }
+                        }
+                        for (int i = 0; i < enteredword.Length; i++) 
+                        {
+                            if (correct[i] == 1)
+                            {
+                                Console.ForegroundColor=ConsoleColor.DarkGreen;
+                                Console.Write(enteredword[i]);
+                            }
+                            else if (correct[i] == 0)
+                            {
+                                Console.ForegroundColor=ConsoleColor.DarkYellow;
+                                Console.Write(enteredword[i]);
+                            }
+                            else
+                            {
+                                Console.ForegroundColor=ConsoleColor.White;
+                                Console.Write(enteredword[i]);
+                            }
+                        }
+                        Console.ForegroundColor=ConsoleColor.White;
+                        Console.WriteLine("");
                     }
                 }
-                for (int i = 0; i < enteredword.Length; i++)
+                Console.WriteLine("");
+                if (enteredwords[loops] == word)
                 {
-                    if (word.Contains(enteredword[i]))
-                    {
-                        correct[i] = 0;
-                    }
+                    guessed = true;
                 }
-                String correctstring = "";
-                foreach (var number in correct)
-                {
-                    correctstring += " " + number.ToString();
-                }
-                Console.WriteLine(correctstring);
+                loops++;
+            }
+            if (guessed)
+            {
+                Console.WriteLine("Well done! The word was " + word);
+            }
+            else 
+            {
+                Console.WriteLine("Unlucky! The word was " + word);
             }
         }
     }
